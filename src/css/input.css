@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  font-family: "Poppins", sans-serif;
+}
+
+.text-coffe{
+  @apply text-[#ce8840];
+}
+
+
+.primary{
+  @apply bg-[#ce8840];
+}
+
+.primaryh{
+  @apply hover:text-[#ce8840];
+}
+
+.text-primary{
+  @apply text-slate-50;
+}
+
+.ring-primary{
+  @apply ring-1 ring-[#ce8840];
+}
+
+.backgroundCoffe{
+  background-image: url(/src/images/bg.png);
+}
+
+.font-icon{
+  font-family: "Bilbo Swash Caps", cursive;
+}
