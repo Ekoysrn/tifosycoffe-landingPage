@@ -15,39 +15,46 @@
   <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap" rel="stylesheet">
   <!-- icon -->
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <!-- animate -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
   <!-- css -->
   <link rel="stylesheet" href="./public/css/output.css">
 </head>
 
 <body class="relative">
   <!-- header start -->
-  <header class="backdrop-blur-xl fixed top-0 w-full bg-transparent bg-lime p-4 z-[999]">
+  <header class="backdrop-blur-xl fixed top-0 w-full bg-transparent p-4 z-[999]">
     <div class="container">
-      <div class="flex items-center justify-between lg:px-8 text-primary">
+      <div class="md:flex items-center justify-between lg:px-8 text-primary">
 
         <!-- icon text -->
-        <div>
+        <div class="">
           <h1 class="font-icon lg:text-5xl font-bold text-coffee text-3xl"><a href="#">tifosycoffee</a></h1>
         </div>
         <!-- icon text -->
 
         <!-- nav start -->
-        <nav class="md:block hidden">
-          <ul class="flex items-center justify-center">
-            <li><a href="#home" class="lg:mr-8 text-base font-medium primaryh">Home</a></li>
-            <li><a href="#aboutme" class="lg:mr-8 text-base font-medium primaryh">About me</a></li>
-            <li><a href="#menu" class="lg:mr-8 text-base font-medium primaryh">Menu</a></li>
-            <li><a href="#product" class="lg:mr-8 text-base font-medium primaryh">Product</a></li>
-            <li><a href="#service" class="lg:mr-8 text-base font-medium primaryh">Service</a></li>
-            <li><a href="#contact" class="lg:mr-8 text-base font-medium primaryh">Contact</a></li>
+        <nav class="nav p-4 z-[9999] md:block hidden">
+          <ul class="md:flex md:items-center w-full mx-auto md:justify-center text-center">
+            <li><a href="#home" class="lg:mr-8 my-10 text-base font-medium text-coffee">Home</a></li>
+            <li><a href="#aboutme" class="lg:mr-8 my-10 text-base font-medium">About Us</a></li>
+            <li><a href="#menu" class="lg:mr-8 my-10 text-base font-medium">Menu</a></li>
+            <li><a href="#product" class="lg:mr-8 my-10 text-base font-medium">Product</a></li>
+            <li><a href="#service" class="lg:mr-8 my-10 text-base font-medium">Service</a></li>
+            <li><a href="#contact" class="lg:mr-8 my-10 text-base font-medium">Contact</a></li>
           </ul>
         </nav>
         <!-- nav end -->
 
         <!-- find and shoping cart -->
-        <div class="lg:text-2xl text-lg">
+        <div class="absolute right-[5%] top-[1rem] text-2xl md:hidden">
+          <span><i class="bars uil uil-bars"></i></span>
+        </div>
+        <div class="lg:text-2xl text-2xl hidden md:inline-block">
           <span><i class="uil uil-search primaryh"></i></span>
-          <span><i class="uil uil-map-marker primaryh"></i></span>
           <span><i class="uil uil-shopping-cart-alt primaryh"></i></span>
           <span><i class="uil uil-user primaryh"></i></span>
         </div>
@@ -308,7 +315,7 @@
             <h1 class="font-icon lg:text-5xl font-bold text-coffee text-xl"><a href="#">tifosycoffee</a></h1>
             <p class="text-slate-50 py-4 text-lg">Contact Us</p>
             <p class="text-slate-50 text-base"><i class="uil uil-envelope-alt mr-2"></i>tifosycoffe21@gmail.com</p>
-            <p class="text-slate-50 text-base"><i class="uil uil-map-marker mr-2"></i>Ny street no.77, Tirtonirmolo, Kasihan, Bantul</p>
+            <p class="text-slate-50 text-base"><i class="uil uil-map-marker mr-2"></i>Ny street no.77, Tirtonirmolo, <span class="md:ml-0 ml-6"> Kasihan, Bantul</span></p>
             <p class="text-slate-50 text-base ml-6">Special Region Of Yogyakarta</p>  
         </div>
         <div class="w-full px-4 my-8 md:my-14 md:w-1/3 text-slate-50">
@@ -428,6 +435,8 @@
     </div>
   </footer>
   <!-- footer end -->
+
+  <script src="./src/js/main.js"></script>
 </body>
 
 </html>
