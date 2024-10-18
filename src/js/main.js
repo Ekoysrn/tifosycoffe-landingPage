@@ -1,6 +1,12 @@
 const navbar = document.querySelector(".nav"),
       bar = document.querySelector(".bars"),
-      sections = document.querySelectorAll("section[id]");
+      sections = document.querySelectorAll("section[id]"),
+      cart = document.querySelector(".uil-shopping-cart-alt"),
+      cartShoping = document.querySelector(".cart"),
+      cartBtn = document.querySelector("#cartShop"),
+      displayCart = document.querySelector("#displayCart"),
+      closeCart = document.querySelector(".close");
+
 
 
 bar.addEventListener("click",function(){
@@ -32,4 +38,22 @@ window.addEventListener("scroll",function(){
       //console.log(`nonActive sectionId = ${sectionId} : \n scrollY = ${scrollY} \n sectionHeight = ${sectionHeight} \n sectionTop = ${sectionTop} \n `)
     }
   })
+})
+
+cart.addEventListener('click',function(){
+  cartShoping.classList.toggle("hidden");
+  if(cart.classList.contains("uil-shopping-cart-alt")){
+    cart.classList.replace("uil-shopping-cart-alt","uil-times");
+  }else{
+    cart.classList.replace("uil-times", "uil-shopping-cart-alt");
+  }
+})
+
+
+cartBtn.addEventListener("click",function(){
+  displayCart.classList.toggle("hidden")
+})
+
+closeCart.addEventListener("click",function(){
+  displayCart.classList.toggle("hidden")
 })

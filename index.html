@@ -16,10 +16,7 @@
   <!-- icon -->
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
   <!-- animate -->
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <!-- css -->
   <link rel="stylesheet" href="./public/css/output.css">
 </head>
@@ -49,19 +46,65 @@
         </nav>
         <!-- nav end -->
 
-        <!-- find and shoping cart -->
-        <div class="absolute right-[5%] top-[1rem] text-2xl md:hidden">
-          <span><i class="bars uil uil-bars"></i></span>
-        </div>
-        <div class="lg:text-2xl text-2xl hidden md:inline-block">
-          <span><i class="uil uil-search primaryh"></i></span>
+        <!-- icon nav start-->
+        <div class="absolute md:static right-[5%] top-[1rem] text-2xl">
           <span><i class="uil uil-shopping-cart-alt primaryh"></i></span>
           <span><i class="uil uil-user primaryh"></i></span>
+          <span><i class="bars uil uil-bars md:hidden primaryh"></i></span>
         </div>
+        <!-- icon nav end -->
       </div>
     </div>
   </header>
   <!-- header end -->
+
+  <!--shoping cart  start-->
+  <div class="cart bg-transparent z-[99] hidden backdrop-blur-lg w-[90%] md:w-1/3  h-screen fixed top-16 right-0">
+    <div class="container mt-14">
+      <h1 class="text-coffee font-bold text-xl">Cart</h1>
+      <div class="bg-[#ce8840]/60 rounded-md mt-8 p-2 md:p-5 flex" >
+        <div class="size-16">
+          <img src="./src/images/product/product1.webp" alt="">
+        </div>
+        <div class="">
+          <h1 class="font-medium text-lg text-slate-50">caramel coffe</h1>
+          <p class="text-base text-slate-50">$69.99 &times; <button class="plus primary text-slate-50 rounded-sm py-[1px] px-2">&minus;</button>
+            <span>1</span>
+            <button class="min primary text-slate-50 rounded-sm py-[1px] px-2">&plus;</button>
+            &equals; <span>$69.99</span></p>
+        </div>
+      </div>
+      <div class="bg-[#ce8840]/60 rounded-md mt-8 p-2 md:p-5 flex" >
+        <div class="size-16">
+          <img src="./src/images/product/product2.webp" alt="">
+        </div>
+        <div class="">
+          <h1 class="font-medium text-lg text-slate-50">mix coffe</h1>
+          <p class="text-base text-slate-50">$70.99 &times; <button class="plus primary text-slate-50 rounded-sm py-[1px] px-2">&minus;</button>
+            <span>1</span>
+            <button class="min primary text-slate-50 rounded-sm py-[1px] px-2">&plus;</button>
+            &equals; <span>$70.99</span></p>
+        </div>
+      </div>
+      <div class="bg-[#ce8840]/60 rounded-md mt-8 p-2 md:p-5 flex" >
+        <div class="size-16">
+          <img src="./src/images/product/product3.webp" alt="">
+        </div>
+        <div class="">
+          <h1 class="font-medium text-lg text-slate-50">black espresso</h1>
+          <p class="text-base text-slate-50">$21.99 &times; <button class="plus primary text-slate-50 rounded-sm py-[1px] px-2">&minus;</button>
+            <span>1</span>
+            <button class="min primary text-slate-50 rounded-sm py-[1px] px-2">&plus;</button>
+            &equals; <span>$21.99</span></p>
+        </div>
+      </div>
+      <div class="bg-[#ce8840]/60 rounded-md flex w-[95%] p-4 absolute bottom-20 justify-between items-center" >
+        <h1 class="text-slate-50 font-medium px-5">Total : <span>$162.97</span></h1>
+        <button class="px-4 py-2 primary rounded-md text-slate-50 hover:opacity-80">Order Now</button>
+      </div>
+    </div>
+  </div>
+  <!-- cart shoping cart end -->
 
   <!-- hero section start -->
   <section id="home" class="backgroundCoffee w-full h-screen pt-28">
@@ -75,7 +118,8 @@
           <p class="text-slate-300 lg:text-lg lg:w-[45%] mt-4 lg:mt-8">choose and taste delicious coffee from the best
             beans
           </p>
-          <button class="lg:px-4 lg:py-2 px-4 py-1 hover:opacity-80 text-primary rounded-md mt-4 primary"><a href="#product">Order Now</a></button>
+          <button class="lg:px-4 lg:py-2 px-4 py-1 hover:opacity-80 text-primary rounded-md mt-4 primary"><a
+              href="#product">Order Now</a></button>
           <button
             class="lg:px-4 lg:py-2 px-4 py-1 m-2 lg:m-5 hover:opacity-80 text-primary rounded-md mt-4 ring-primary hidden md:inline-block"><a
               href="#aboutme">Learn About
@@ -173,11 +217,12 @@
   <!-- best product -->
   <section id="product" class="pt-24 backgroundCoffee">
     <div class="container">
-      <div class="md:max-w-7xl mx-auto px-4">
+      <div class="md:max-w-7xl mx-auto px-4 relative">
         <div class="w-full mb-8">
           <h1 class="text-coffee lg:text-3xl md:mb-4 font-bold text-center">Product</h1>
           <p class="text-slate-50 text-base text-center">our best coffee product</p>
         </div>
+
         <!-- product start-->
         <div class="w-full lg:grid lg:grid-cols-3 lg:gap-4 md:max-w-7xl pb-24 ">
           <div class="bg-[#303030] rounded-lg w-full p-4 relative mb-8">
@@ -185,10 +230,11 @@
               <img src="./src/images/product/product1.webp" alt="productfirst">
             </div>
             <h1 class="text-coffee text-xl px-4 font-bold">caramel coffee</h1>
-            <p class="px-4 text-slate-50 mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illo quidem vel quae! Excepturi dolore, dolores ab cumque delectus velit?</p>
+            <p class="px-4 text-slate-50 mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illo
+              quidem vel quae! Excepturi dolore, dolores ab cumque delectus velit?</p>
             <p class="text-coffee px-4 mt-4 mb-10 font-bold">$69.99</p>
-            <div class="primary absolute bottom-0 right-0 rounded-tl-md rounded-br-md px-4 py-2 hover:opacity-80
-            cursor-pointer">
+            <div id="cartShop" class="primary absolute bottom-0 right-0 rounded-tl-md rounded-br-md px-4 py-2 hover:opacity-80
+            cursor-pointer ">
               <i class="uil uil-shopping-cart text-slate-50 text-2xl"></i>
             </div>
           </div>
@@ -197,7 +243,8 @@
               <img src="./src/images/product/product2.webp" alt="productsecond">
             </div>
             <h1 class="text-coffee text-xl px-4 font-bold">mix coffee</h1>
-            <p class="px-4 text-slate-50 mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illo quidem vel quae! Excepturi dolore, dolores ab cumque delectus velit?</p>
+            <p class="px-4 text-slate-50 mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illo
+              quidem vel quae! Excepturi dolore, dolores ab cumque delectus velit?</p>
             <p class="text-coffee px-4 mt-4 mb-10 font-bold">$70.99</p>
             <div class="primary absolute bottom-0 right-0 rounded-tl-md rounded-br-md px-4 py-2 hover:opacity-80
             cursor-pointer">
@@ -209,7 +256,8 @@
               <img src="./src/images/product/product3.webp" alt="productthird">
             </div>
             <h1 class="text-coffee text-xl px-4 font-bold">black espresso</h1>
-            <p class="px-4 text-slate-50 mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illo quidem vel quae! Excepturi dolore, dolores ab cumque delectus velit?</p>
+            <p class="px-4 text-slate-50 mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illo
+              quidem vel quae! Excepturi dolore, dolores ab cumque delectus velit?</p>
             <p class="text-coffee px-4 mt-4 mb-10 font-bold">$21.99</p>
             <div class="primary absolute bottom-0 right-0 rounded-tl-md rounded-br-md px-4 py-2 hover:opacity-80
             cursor-pointer">
@@ -236,21 +284,27 @@
               <img src="./src/images/services/coffee-shop.png" class="mx-auto hover:scale-105 duration-300" alt="">
             </div>
             <h1 class="text-slate-50 text-center md:mt-8 md:mb-4 mt-4 mb-2 font-bold text-lg primaryh">Our otlet</h1>
-            <p class="text-slate-50 text-center text-base">We offer our clients excellent quality services for many years, with the best and delicious food in the city.</p>
+            <p class="text-slate-50 text-center text-base">We offer our clients excellent quality services for many
+              years, with the best and delicious food in the city.</p>
           </div>
           <div class="size-32 w-full mb-32">
             <div class="w-full mx-auto">
               <img src="./src/images/services/coffee-machine.png" class="mx-auto hover:scale-105 duration-300" alt="">
             </div>
-            <h1 class="text-slate-50 text-center md:mt-8 md:mb-4 mt-4 mb-2 font-bold text-lg primaryh">quality coffee</h1>
-            <p class="text-slate-50 text-center text-base">We offer our clients excellent quality services for many years, with the best and delicious food in the city.</p>
+            <h1 class="text-slate-50 text-center md:mt-8 md:mb-4 mt-4 mb-2 font-bold text-lg primaryh">quality coffee
+            </h1>
+            <p class="text-slate-50 text-center text-base">We offer our clients excellent quality services for many
+              years, with the best and delicious food in the city.</p>
           </div>
           <div class="size-32 w-full mb-32">
             <div class="w-full mx-auto">
-              <img src="./src/images/services/food-truck.png" class="mx-auto hover:scale-105 duration-300 rotateY" alt="">
+              <img src="./src/images/services/food-truck.png" class="mx-auto hover:scale-105 duration-300 rotateY"
+                alt="">
             </div>
-            <h1 class="text-slate-50 text-center md:mt-8 md:mb-4 mt-4 mb-2 font-bold text-lg primaryh">online fast order</h1>
-            <p class="text-slate-50 text-center text-base">We offer our clients excellent quality services for many years, with the best and delicious food in the city.</p>
+            <h1 class="text-slate-50 text-center md:mt-8 md:mb-4 mt-4 mb-2 font-bold text-lg primaryh">online fast order
+            </h1>
+            <p class="text-slate-50 text-center text-base">We offer our clients excellent quality services for many
+              years, with the best and delicious food in the city.</p>
           </div>
         </div>
         <!-- service list end -->
@@ -261,13 +315,16 @@
             <h1 class="text-slate-50 my-8 text-center text-base">you can order delivery on:</h1>
             <div class="w-full md:flex md:items-center md:justify-center">
               <div class="w-full mr-4 mb-4">
-                <img src="./src/images/services/grabfood.png" alt="" class="rounded-md mx-auto transition-all duration-300 hover:scale-105 cursor-pointer">
+                <img src="./src/images/services/grabfood.png" alt=""
+                  class="rounded-md mx-auto transition-all duration-300 hover:scale-105 cursor-pointer">
               </div>
               <div class="w-full mr-4 mb-4 mx-auto">
-                <img src="./src/images/services/gofood.png" alt="" class="rounded-md mx-auto transition-all duration-300 hover:scale-105 cursor-pointer">
+                <img src="./src/images/services/gofood.png" alt=""
+                  class="rounded-md mx-auto transition-all duration-300 hover:scale-105 cursor-pointer">
               </div>
               <div class="w-full mr-4 mb-4 mx-auto">
-                <img src="./src/images/services/shopeefood.png" alt="" class="rounded-md mx-auto transition-all duration-300 hover:scale-105 cursor-pointer">
+                <img src="./src/images/services/shopeefood.png" alt=""
+                  class="rounded-md mx-auto transition-all duration-300 hover:scale-105 cursor-pointer">
               </div>
             </div>
           </div>
@@ -285,20 +342,29 @@
         <div class="w-full md:w-1/2 px-4 py-4">
           <h1 class="text-coffee text-2xl font-bold">Contact Us</h1>
           <h1 class="text-slate-50 my-4">for more information about tifosycoffee, please contact us</h1>
-          <iframe class="rounded-lg md:block hidden" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37915.013405194535!2d110.3138473242202!3d-7.821013939276226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7af812301914ad%3A0x6be3b57fcd94e9bd!2sKasihan%2C%20Bantul%20Regency%2C%20Special%20Region%20of%20Yogyakarta!5e1!3m2!1sen!2sid!4v1728915537623!5m2!1sen!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe class="rounded-lg md:block hidden"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37915.013405194535!2d110.3138473242202!3d-7.821013939276226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7af812301914ad%3A0x6be3b57fcd94e9bd!2sKasihan%2C%20Bantul%20Regency%2C%20Special%20Region%20of%20Yogyakarta!5e1!3m2!1sen!2sid!4v1728915537623!5m2!1sen!2sid"
+            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="w-full md:w-1/2 px-4 md:pt-14 pb-4 relative">
           <form action="">
             <label class="text-slate-50" for="name">Full Name
-              <input type="text" name="name" class="block mt-2 my-8 w-11/12 p-2 rounded-md focus:outline-none text-slate-900 ring-1 ring-primary" placeholder="full name">
+              <input type="text" name="name"
+                class="block mt-2 my-8 w-11/12 p-2 rounded-md focus:outline-none text-slate-900 ring-1 ring-primary"
+                placeholder="full name">
             </label>
             <label class="text-slate-50" for="name">email
-              <input type="text" name="name" class="block mt-2 my-8 w-11/12 p-2 rounded-md focus:outline-none text-slate-900 ring-1 ring-primary" placeholder="email">
+              <input type="text" name="name"
+                class="block mt-2 my-8 w-11/12 p-2 rounded-md focus:outline-none text-slate-900 ring-1 ring-primary"
+                placeholder="email">
             </label>
             <label class="text-slate-50" for="message">Message
-              <textarea name="message" id="message" placeholder="type your message here" class="block p-2 rounded-md focus:outline-none w-11/12 h-1/2 mt-2 my-12 ring-1 ring-primary text-slate-900"></textarea>
+              <textarea name="message" id="message" placeholder="type your message here"
+                class="block p-2 rounded-md focus:outline-none w-11/12 h-1/2 mt-2 my-12 ring-1 ring-primary text-slate-900"></textarea>
             </label>
-            <button type="submit" class="primary px-4 py-2 rounded-md text-slate-50 absolute right-[11%] bottom-0">Send Message</button>
+            <button type="submit" class="primary px-4 py-2 rounded-md text-slate-50 absolute right-[11%] bottom-0">Send
+              Message</button>
           </form>
         </div>
       </div>
@@ -309,14 +375,15 @@
   <!-- footer start-->
   <footer class="pt-24 h-full backgroundCoffee">
     <div class="container">
-      
+
       <div class="flex flex-wrap p-4 align-baseline">
         <div class="w-full px-4 pt-4 md:w-1/3">
-            <h1 class="font-icon lg:text-5xl font-bold text-coffee text-xl"><a href="#">tifosycoffee</a></h1>
-            <p class="text-slate-50 py-4 text-lg">Contact Us</p>
-            <p class="text-slate-50 text-base"><i class="uil uil-envelope-alt mr-2"></i>tifosycoffe21@gmail.com</p>
-            <p class="text-slate-50 text-base"><i class="uil uil-map-marker mr-2"></i>Ny street no.77, Tirtonirmolo, <span class="md:ml-0 ml-6"> Kasihan, Bantul</span></p>
-            <p class="text-slate-50 text-base ml-6">Special Region Of Yogyakarta</p>  
+          <h1 class="font-icon lg:text-5xl font-bold text-coffee text-xl"><a href="#">tifosycoffee</a></h1>
+          <p class="text-slate-50 py-4 text-lg">Contact Us</p>
+          <p class="text-slate-50 text-base"><i class="uil uil-envelope-alt mr-2"></i>tifosycoffe21@gmail.com</p>
+          <p class="text-slate-50 text-base"><i class="uil uil-map-marker mr-2"></i>Ny street no.77, Tirtonirmolo, <span
+              class="md:ml-0 ml-6"> Kasihan, Bantul</span></p>
+          <p class="text-slate-50 text-base ml-6">Special Region Of Yogyakarta</p>
         </div>
         <div class="w-full px-4 my-8 md:my-14 md:w-1/3 text-slate-50">
           <h1 class="text-lg mb-1.5 md:text-xl font-medium hover:textf-gradient">Menu</h1>
@@ -365,7 +432,8 @@
           <ul class="flex justify-center gap-6 md:justify-end md:gap-8">
             <!-- facebook start -->
             <li>
-              <a href="https://web.facebook.com/ekoysrnardzh/" rel="noreferrer" target="_blank" class="text-gray-600 transition hover:text-gray-500">
+              <a href="https://web.facebook.com/ekoysrnardzh/" rel="noreferrer" target="_blank"
+                class="text-gray-600 transition hover:text-gray-500">
                 <span class="sr-only">Facebook</span>
                 <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path fill-rule="evenodd"
@@ -378,7 +446,8 @@
 
             <!-- instagram start -->
             <li class="">
-              <a href="https://www.instagram.com/ysrnar_/" rel="noreferrer" target="_blank" class="text-gray-600 transition hover:text-gray-500">
+              <a href="https://www.instagram.com/ysrnar_/" rel="noreferrer" target="_blank"
+                class="text-gray-600 transition hover:text-gray-500">
                 <span class="sr-only">Instagram</span>
                 <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path fill-rule="evenodd"
@@ -391,7 +460,8 @@
 
             <!-- twitter start -->
             <li>
-              <a href="https://x.com/ekoyusron_" rel="noreferrer" target="_blank" class="text-gray-600 transition hover:text-gray-500">
+              <a href="https://x.com/ekoyusron_" rel="noreferrer" target="_blank"
+                class="text-gray-600 transition hover:text-gray-500">
                 <span class="sr-only">Twitter</span>
                 <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path
@@ -404,7 +474,8 @@
 
             <!-- github start -->
             <li>
-              <a href="https://github.com/Ekoysrn" rel="noreferrer" target="_blank" class="text-gray-600 transition hover:text-gray-500">
+              <a href="https://github.com/Ekoysrn" rel="noreferrer" target="_blank"
+                class="text-gray-600 transition hover:text-gray-500">
                 <span class="sr-only">GitHub</span>
                 <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path fill-rule="evenodd"
@@ -417,7 +488,8 @@
 
             <!-- youtube start -->
             <li>
-              <a href="https://www.youtube.com/@ekoyusron" rel="noreferrer" target="_blank" class="text-gray-600 transition hover:text-gray-500">
+              <a href="https://www.youtube.com/@ekoyusron" rel="noreferrer" target="_blank"
+                class="text-gray-600 transition hover:text-gray-500">
                 <span class="sr-only">Dribbble</span>
                 <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path fill-rule="evenodd"
