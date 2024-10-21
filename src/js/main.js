@@ -57,3 +57,9 @@ cartBtn.addEventListener("click",function(){
 closeCart.addEventListener("click",function(){
   displayCart.classList.toggle("hidden")
 })
+
+// stay tuned coming soon
+
+function stayTuned(){
+  alert("stay tuned guys coming soon!")
+}
