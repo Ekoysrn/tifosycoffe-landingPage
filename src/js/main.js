@@ -2,7 +2,8 @@ const navbar = document.querySelector(".nav"),
       bar = document.querySelector(".bars"),
       sections = document.querySelectorAll("section[id]"),
       cartBtn = document.querySelector(".uil-shopping-cart-alt"),
-      cartShoping = document.querySelector(".cart");
+      cartShoping = document.querySelector(".cart"),
+      notif = document.querySelector(".notif");
 
 
 bar.addEventListener("click",function(){
@@ -35,6 +36,7 @@ window.addEventListener("scroll",function(){
 
 cartBtn.addEventListener('click',function(){
   cartShoping.classList.toggle("hidden");
+  notif.classList.toggle("hidden")
   if(cartBtn.classList.contains("uil-shopping-cart-alt")){
     cartBtn.classList.replace("uil-shopping-cart-alt","uil-times");
   }else{
@@ -42,6 +44,7 @@ cartBtn.addEventListener('click',function(){
   }
 })
 
+notif.classList.add("hidden");
 
 // onkeyup input number
 function enforceMinMax(el) {
@@ -111,24 +114,28 @@ function updateQuantity(id,newQuantity){
   renderCart();
 }
 
-
 // function rendercart  
 function renderCart(){
   const container = document.querySelector(".cartItem"),
         total = document.querySelector("#total");
-  
+
   container.innerHTML = '';
   let totalCart = 0;
+  let totalNotif = 0;
+  
+  notif.classList.remove("hidden");
 
   cart.forEach(item => {
     totalCart += item.price * item.quantity;
     totalItem = item.price * item.quantity;
 
+
+    totalNotif += item.quantity
+
     const newDiv = document.createElement("div");
     newDiv.innerHTML = `<div class="bg-[#ce8840]/60 rounded-md mt-8 p-2 md:p-5 flex relative" >
-          <div class="size-16">
-            <img src="${item.img}" alt="">
-          </div>
+          
+            <img src="${item.img}" alt="" class="size-16">
           <div class="">
             <h1 class="font-medium text-lg text-slate-50">${item.name}</h1>
             <p class="text-base text-slate-50">$ <span>${item.price.toFixed(2)}</span> &times; <button onclick="updateQuantity(${item.id}, ${item.quantity - 1})" class="plus primary text-slate-50 rounded-sm py-[1px] px-2">&minus;</button>
@@ -143,5 +150,5 @@ function renderCart(){
       });
       
       total.innerHTML = totalCart.toFixed(2);
-
+      notif.textContent = totalNotif;
 }
